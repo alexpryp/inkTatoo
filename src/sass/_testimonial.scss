@@ -1,0 +1,47 @@
+.testimonial, .slide {
+	width: 1500px;
+	height: 350px;
+}
+.slide {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.livello1 {
+	background-image: url(../../images/testimonial/livello1.jpg);
+}
+.livello2 {
+	background-image: url(../../images/testimonial/livello2.jpg);
+}
+.livello3 {
+	background-image: url(../../images/testimonial/livello3.jpg);
+}
+.quote-text {
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+}
+.left-quotation-mark, .right-quotation-mark {
+
+}
+.quote-text-content {
+	text-align: center;
+	font-style: italic;
+	font-size: 24px;
+	color: #f2efe5;
+}
+.right-quotation-mark {
+	display: flex;
+	align-items: flex-end;
+}
+.quote-caption-text {
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #f2efe5;
+	text-align: right;
+	margin: 20px;
+	padding: 0 60px;
+}
