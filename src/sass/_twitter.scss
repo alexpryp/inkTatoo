@@ -1,0 +1,23 @@
+.twitter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 1500px;
+	height: 350px;
+	color: #fff;
+	background-image: url(../../images/twitter/twitter_bg.jpg);
+}
+.twitter-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.twitter-icon {
+	font-size: 48px;
+	margin: 20px;
+}
+.twitter-content {
+	font-size: 22px;
+	font-style: italic;
+}

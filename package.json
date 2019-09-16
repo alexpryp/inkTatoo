@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alexpryp/inkTatoo.git"
+    "url": "git+https://github.com/alexpryp/inkTattoo.git"
   },
   "author": "Alexandr",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/alexpryp/inkTatoo/issues"
+    "url": "https://github.com/alexpryp/inkTattoo/issues"
   },
   "homepage": "https://github.com/alexpryp/inkTatoo#readme",
   "devDependencies": {
