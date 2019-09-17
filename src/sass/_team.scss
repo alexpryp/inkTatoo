@@ -1,4 +1,4 @@
-.team {
+ .team {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 }
@@ -20,8 +20,10 @@
 	height: 100px;
 	text-transform: uppercase;
 	border: 10px solid #000;
-	h1 {
+	h2 {
 		text-align: center;
+		font-size: 2em;
+		margin: 22px 0;
 	}
 }
 .team-item-2 {
