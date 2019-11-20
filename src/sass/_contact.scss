@@ -1,9 +1,10 @@
 .contact {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	//grid-template-columns: 1fr 1fr;
+	grid-template-columns: repeat(2, minmax(375px, 1fr));
 	justify-items: center;
 	align-items: center;
-	width: 1500px;
+	//width: 1500px;
 	height: 900px;
 }
 .contact-us {
@@ -11,7 +12,7 @@
 	justify-items: center;
 	align-items: center;
 	grid-template-columns: 1fr 1fr;
-	max-width: 585px;
+	//max-width: 585px;
 	max-height: 565px;
 }
 .contact-head {
@@ -39,7 +40,7 @@
 	display: grid;
 	justify-items: center;
 	align-items: center;
-	max-width: 585px;
+	//max-width: 585px;
 }
 .contact-info, .contact-hours {
 	display: grid;
@@ -77,8 +78,81 @@ input[type="email"] {
 }
 .contact-social {
 	justify-self: center;
-	//grid-template-columns: 1fr 1fr;
 	grid-area: 4 / 1 / 5 / 3;
 	width: 395px;
 	margin-top: 50px;
+
+}
+
+
+//-------------------------------------------------
+// Media queries
+@media screen and (max-width: 1000px) {
+	.email-message input[type="email"], 
+	.email-message input[type="button"], 
+	.email-message input[type="text"] {
+		width: 360px;
+	}
+}
+@media screen and (max-width: 750px) {
+	.contact {
+		grid-template-columns: repeat(1, minmax(375px, 1fr));
+		height: 1200px;
+	}
+	.email-message input[type="email"], 
+	.email-message input[type="button"], 
+	.email-message input[type="text"] {
+		width: 470px;
+	}
+}
+@media screen and (max-width: 500px) {
+	.contact-us {
+		grid-template-columns: 1fr;
+		height: 1200px;
+	}
+	.contact-head {
+		grid-area: 1 / 1 / 2 / 2;
+		margin-bottom: 40px;
+	}
+	.contact-text {
+		grid-area: 2 / 1 / 3 / 2;
+	}
+	.contact-social {
+		grid-area: 5 / 1 / 6 / 2;
+	}
+	.contact-hours {
+		margin-top: 20px;
+	}
+	.email-message input[type="email"], 
+	.email-message input[type="button"], 
+	.email-message input[type="text"] {
+		width: 390px;
+	}
+}
+@media screen and (max-width: 400px) {
+	.contact {
+		grid-template-columns: repeat(1, minmax(300px, 1fr));
+	}
+	.contact-social {
+		width: 300px;
+	}
+	.email-message input[type="email"], 
+	.email-message input[type="button"], 
+	.email-message input[type="text"] {
+		width: 260px;
+	}
+}
+@media screen and (max-width: 300px) {
+	.contact {
+		grid-template-columns: repeat(1, minmax(260px, 1fr));
+	}
+	.contact-social {
+		width: 200px;
+	}
+	.contact-social,
+	.email-message input[type="email"], 
+	.email-message input[type="button"], 
+	.email-message input[type="text"] {
+		width: 200px;
+	}
 }

@@ -1,10 +1,10 @@
- .team {
+.team {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(3, minmax(250px, 1fr));
 }
 .team-item {
 	height: 500px;
-	width: 500px;
+	//width: 500px;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -99,4 +99,18 @@ input[type="button"] {
 	font-size: 12px;
 	text-transform: uppercase;
 	background-color: #9a977a;
+}
+
+
+//-------------------------------------------------
+// Media queries
+@media screen and (max-width: 1000px) {
+	.team {
+		grid-template-columns: repeat(2, minmax(250px, 1fr));
+	}
+}
+@media screen and (max-width: 600px) {
+	.team {
+		grid-template-columns: repeat(1, minmax(250px, 1fr));
+	}
 }
