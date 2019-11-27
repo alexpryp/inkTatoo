@@ -27,6 +27,11 @@
 }
 .gallery-item {
 	height: 300px;
+	&:hover {
+		cursor: pointer;
+		opacity: .60;
+		transition: 0.5s;
+	}
 }
 .gallery-item-1 {
 	background-image: url(../../images/gallery/gallery1.jpg);

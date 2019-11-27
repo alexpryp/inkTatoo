@@ -14,6 +14,12 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+
+	&:hover {
+		cursor: pointer;
+		opacity: .60;
+		transition: 0.5s;
+	}
 }
 .about-item-big {
 	height: 500px;
@@ -23,6 +29,11 @@
 	justify-content: center;
 	align-items: center;
 	background-image: url(../../images/about_us/img_studio_bg.jpg);
+	&:hover {
+		cursor: pointer;
+		opacity: .60;
+		transition: 0.5s;
+	}
 }
 .about-us-head {
 	width: 300px;

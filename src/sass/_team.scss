@@ -99,6 +99,11 @@ input[type="button"] {
 	font-size: 12px;
 	text-transform: uppercase;
 	background-color: #9a977a;
+
+	&:hover {
+		cursor: pointer;
+		background-color: #645E28;
+	}
 }
 
 
