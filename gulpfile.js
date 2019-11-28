@@ -5,27 +5,32 @@ const autoprefixer = require('gulp-autoprefixer');
 const cssmin = require('gulp-cssmin'); //Минификатор CSS файлов
 const del = require('del');
 const babel = require('gulp-babel');
+const sourcemaps = require('gulp-sourcemaps');
 
 
 sass.compiler = require('node-sass');
 
 function styles() {
 	return gulp.src('./src/sass/style.scss') //берём файлы на обработку
+				.pipe(sourcemaps.init()) //инициализация создания карт исходного кода
 				.pipe(sass().on('error', sass.logError)) //компиляция из scss в css
 				.pipe(autoprefixer({
 		            overrideBrowserlist: ['> 1%'],
 		            cascade: false
 		        }))
-				.pipe(cssmin())
+				//.pipe(cssmin())
+				.pipe(sourcemaps.write('./')) // сохранение карты исходного кода
 				.pipe(gulp.dest('./dist/css')); //сохраняем обработанные файлы
 }
 
 function scripts() {
 	return gulp.src(['./src/js/script.js']) //берём файлы на обработку
+				.pipe(sourcemaps.init()) //инициализация создания карт исходного кода
 				.pipe(concat('script.js')) //Объединение всех файлов в один script.js
 				.pipe(babel({
 		            presets: ['@babel/env']
 		        }))
+		        .pipe(sourcemaps.write('./')) // сохранение карты исходного кода
 				.pipe(gulp.dest('./dist/js')); //сохраняем обработанные файлы
 }
 
