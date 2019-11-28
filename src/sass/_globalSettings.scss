@@ -22,3 +22,18 @@ body {
 	cursor: pointer;
 	color: #555;
 }
+
+//------------------------------------------
+//The state of elements before and after animation
+.hide-item {
+	//transform: scale3d(0, 0, 0);
+	transform: scale3d(0, 0, 0) rotateY(180deg);
+	transform-origin: center;
+	transition: all 0.7s ease-out;
+}
+.show-item {
+	//transform: scale3d(1, 1, 1);
+	transform: scale3d(1, 1, 1) rotateY(0);
+	transform-origin: center;
+	transition: all 0.7s ease-out;
+}
