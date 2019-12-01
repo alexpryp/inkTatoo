@@ -11,6 +11,6 @@ The following technologies were used to create this page:
 * CSS3, Flexbox, Grid layout
 * SASS
 * JavaScript, jQuery
-* Gulp, Autoprefixer, Babel, Sourcemaps
+* Node.js, Gulp, Autoprefixer, Babel, Sourcemaps
 * Git
 * Photoshop
