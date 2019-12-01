@@ -28,7 +28,6 @@ window.onload = function () {
 let isScrolling = false;
 
 window.addEventListener("scroll", throttleScroll, false);
-document.addEventListener("DOMContentLoaded", scrolling, false);
 
 function isPartiallyVisible(el) {
   let elementBoundary = el.getBoundingClientRect();
@@ -64,59 +63,21 @@ function throttleScroll(e) {
   isScrolling = true;
 }
 
+document.addEventListener("DOMContentLoaded", scrolling, false);
+
 let elementArray = [];
 let elementCounter = 0;
 
-elementArray.push([$("header")[0], true]);
-elementArray.push([$(".about-item-1")[0], true]);
-elementArray.push([$(".about-item-2")[0], true]);
-elementArray.push([$(".about-item-3")[0], true]);
-elementArray.push([$(".about-item-4")[0], true]);
-elementArray.push([$(".about-item-5")[0], true]);
-elementArray.push([$(".about-item-6")[0], true]);
-elementArray.push([$(".about-item-7")[0], true]);
-elementArray.push([$(".about-item-8")[0], true]);
-elementArray.push([$(".about-item-9")[0], true]);
-elementArray.push([$(".about-item-10")[0], true]);
-elementArray.push([$(".about-item-11")[0], true]);
-elementArray.push([$(".about-item-12")[0], true]);
-elementArray.push([$(".about-item-13")[0], true]);
-elementArray.push([$(".about-item-14")[0], true]);
-elementArray.push([$(".testimonial")[0], true]);
-elementArray.push([$(".team-item-1")[0], true]);
-elementArray.push([$(".team-item-2")[0], true]);
-elementArray.push([$(".team-item-3")[0], true]);
-elementArray.push([$(".team-item-4")[0], true]);
-elementArray.push([$(".team-item-5")[0], true]);
-elementArray.push([$(".team-item-6")[0], true]);
-elementArray.push([$(".twitter")[0], true]);
-elementArray.push([$(".gallery-head")[0], true]);
-elementArray.push([$(".gallery-item-1")[0], true]);
-elementArray.push([$(".gallery-item-2")[0], true]);
-elementArray.push([$(".gallery-item-3")[0], true]);
-elementArray.push([$(".gallery-item-4")[0], true]);
-elementArray.push([$(".gallery-item-5")[0], true]);
-elementArray.push([$(".gallery-item-6")[0], true]);
-elementArray.push([$(".gallery-item-7")[0], true]);
-elementArray.push([$(".gallery-item-8")[0], true]);
-elementArray.push([$(".gallery-item-9")[0], true]);
-elementArray.push([$(".gallery-item-10")[0], true]);
-elementArray.push([$(".gallery-item-11")[0], true]);
-elementArray.push([$(".gallery-item-12")[0], true]);
-elementArray.push([$(".gallery-item-13")[0], true]);
-elementArray.push([$(".gallery-item-14")[0], true]);
-elementArray.push([$(".gallery-item-15")[0], true]);
-elementArray.push([$(".gallery-item-16")[0], true]);
-elementArray.push([$(".gallery-item-17")[0], true]);
-elementArray.push([$(".gallery-item-18")[0], true]);
-elementArray.push([$(".contact-us")[0], true]);
-elementArray.push([$(".email-message")[0], true]);
-elementArray.push([$(".map")[0], true]);
-elementArray.push([$("footer")[0], true]);
+let selectorsArray = ["header", ".about-item-1", ".about-item-2", ".about-item-3", ".about-item-4", ".about-item-5", ".about-item-6", ".about-item-7", ".about-item-8", ".about-item-9", ".about-item-10", ".about-item-11", ".about-item-12", ".about-item-13", ".about-item-14", ".testimonial", ".team-item-1", ".team-item-2", ".team-item-3", ".team-item-4", ".team-item-5", ".team-item-6", ".twitter", ".gallery-head", ".gallery-item-1", ".gallery-item-2", ".gallery-item-3", ".gallery-item-4", ".gallery-item-5", ".gallery-item-6", ".gallery-item-7", ".gallery-item-8", ".gallery-item-9", ".gallery-item-10", ".gallery-item-11", ".gallery-item-12", ".gallery-item-13", ".gallery-item-14", ".gallery-item-15", ".gallery-item-16", ".gallery-item-17", ".gallery-item-18", ".contact-us", ".email-message", ".map", "footer"]
+
+for (let i = 0; i < selectorsArray.length; i++) {
+	elementArray.push([$(selectorsArray[i])[0], true]);
+}
 
 function scrolling(e) {
 	for(let i = 0; i < elementArray.length; i++) {
-		if (elementCounter == 46) {
+		if (elementCounter == selectorsArray.length) {
+			document.removeEventListener("DOMContentLoaded", scrolling);
 			break;
 		}
 		if (elementArray[i][1] && isPartiallyVisible( elementArray[i][0] )) {
