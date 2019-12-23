@@ -28,6 +28,12 @@
 }
 .team-item-2 {
 	background-image: url(../../images/team/corey.jpg);
+	transition: 0.5s;
+	&:hover {
+		cursor: pointer;
+		filter: contrast(150%);
+		transition: 0.5s;
+	}
 }
 .team-item-3, .team-item-5, .team-item-6 {
 	display: flex;
@@ -39,6 +45,12 @@
 }
 .team-item-4 {
 	background-image: url(../../images/team/kat.jpg);
+	transition: 0.5s;
+	&:hover {
+		cursor: pointer;
+		filter: contrast(150%);
+		transition: 0.5s;
+	}
 }
 .about-team {
 	max-width: 400px;

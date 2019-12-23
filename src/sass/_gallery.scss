@@ -27,9 +27,11 @@
 }
 .gallery-item {
 	height: 300px;
+	transition: 0.5s;
+
 	&:hover {
 		cursor: pointer;
-		opacity: .60;
+		filter: contrast(150%);
 		transition: 0.5s;
 	}
 }

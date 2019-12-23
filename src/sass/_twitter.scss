@@ -6,6 +6,12 @@
 	height: 350px;
 	color: #fff;
 	background-image: url(../../images/twitter/twitter_bg.jpg);
+	transition: 0.5s;
+		&:hover {
+			cursor: pointer;
+			filter: contrast(150%);
+			transition: 0.5s;
+		}
 }
 .twitter-content {
 	display: flex;

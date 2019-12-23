@@ -105,7 +105,8 @@ nav a.active {
   background-position: center; }
   .about-item:hover {
     cursor: pointer;
-    opacity: .60;
+    -webkit-filter: contrast(150%);
+    filter: contrast(150%);
     transition: 0.5s; }
 
 .about-item-big {
@@ -118,7 +119,8 @@ nav a.active {
   background-image: url(../../images/about_us/img_studio_bg.jpg); }
   .about-item-1:hover {
     cursor: pointer;
-    opacity: .60;
+    -webkit-filter: contrast(150%);
+    filter: contrast(150%);
     transition: 0.5s; }
 
 .about-us-head {
@@ -210,6 +212,8 @@ nav a.active {
   background-position: center;
   opacity: 0;
   transition: 2s; }
+  .slide:hover {
+    cursor: pointer; }
 
 .livello1 {
   background-image: url(../../images/testimonial/livello1.jpg); }
@@ -274,7 +278,13 @@ nav a.active {
     margin: 22px 0; }
 
 .team-item-2 {
-  background-image: url(../../images/team/corey.jpg); }
+  background-image: url(../../images/team/corey.jpg);
+  transition: 0.5s; }
+  .team-item-2:hover {
+    cursor: pointer;
+    -webkit-filter: contrast(150%);
+    filter: contrast(150%);
+    transition: 0.5s; }
 
 .team-item-3, .team-item-5, .team-item-6 {
   display: flex;
@@ -285,7 +295,13 @@ nav a.active {
   background-color: #ccc8b6; }
 
 .team-item-4 {
-  background-image: url(../../images/team/kat.jpg); }
+  background-image: url(../../images/team/kat.jpg);
+  transition: 0.5s; }
+  .team-item-4:hover {
+    cursor: pointer;
+    -webkit-filter: contrast(150%);
+    filter: contrast(150%);
+    transition: 0.5s; }
 
 .about-team {
   max-width: 400px; }
@@ -381,7 +397,13 @@ input[type="button"] {
     margin: 22px 0; }
 
 .team-item-2 {
-  background-image: url(../../images/team/corey.jpg); }
+  background-image: url(../../images/team/corey.jpg);
+  transition: 0.5s; }
+  .team-item-2:hover {
+    cursor: pointer;
+    -webkit-filter: contrast(150%);
+    filter: contrast(150%);
+    transition: 0.5s; }
 
 .team-item-3, .team-item-5, .team-item-6 {
   display: flex;
@@ -392,7 +414,13 @@ input[type="button"] {
   background-color: #ccc8b6; }
 
 .team-item-4 {
-  background-image: url(../../images/team/kat.jpg); }
+  background-image: url(../../images/team/kat.jpg);
+  transition: 0.5s; }
+  .team-item-4:hover {
+    cursor: pointer;
+    -webkit-filter: contrast(150%);
+    filter: contrast(150%);
+    transition: 0.5s; }
 
 .about-team {
   max-width: 400px; }
@@ -468,7 +496,13 @@ input[type="button"] {
   width: 100%;
   height: 350px;
   color: #fff;
-  background-image: url(../../images/twitter/twitter_bg.jpg); }
+  background-image: url(../../images/twitter/twitter_bg.jpg);
+  transition: 0.5s; }
+  .twitter:hover {
+    cursor: pointer;
+    -webkit-filter: contrast(150%);
+    filter: contrast(150%);
+    transition: 0.5s; }
 
 .twitter-content {
   display: flex;
@@ -511,10 +545,12 @@ input[type="button"] {
     margin: 22px 0; }
 
 .gallery-item {
-  height: 300px; }
+  height: 300px;
+  transition: 0.5s; }
   .gallery-item:hover {
     cursor: pointer;
-    opacity: .60;
+    -webkit-filter: contrast(150%);
+    filter: contrast(150%);
     transition: 0.5s; }
 
 .gallery-item-1 {

@@ -13,6 +13,10 @@
 	background-position: center;
 	opacity: 0;
 	transition: 2s;
+
+	&:hover {
+		cursor: pointer;
+	}
 }
 .livello1 {
 	background-image: url(../../images/testimonial/livello1.jpg);
