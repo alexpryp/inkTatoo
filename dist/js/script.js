@@ -20,9 +20,61 @@ window.onload = function () {
       x = 0;
     }
   }
-}; //---------------------------------------------------------------------------
-//Page component animation
+}; //-------------------------------------------------------------
+//script that simulates active tabs
 
+
+function activateTab(evt) {
+  var i, tablinks; // Get all elements with class="tablinks" and remove the class "active"
+
+  tablinks = document.getElementsByClassName("tablinks");
+
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", " ");
+  } //Add an "active" class to the button that opened the tab
+
+
+  evt.currentTarget.className += " active";
+} // smooth page movement to the desired block
+
+
+var anchors = document.querySelectorAll('a[href*="#"]');
+var _iteratorNormalCompletion = true;
+var _didIteratorError = false;
+var _iteratorError = undefined;
+
+try {
+  var _loop = function _loop() {
+    var anchor = _step.value;
+    anchor.addEventListener("click", function (event) {
+      event.preventDefault();
+      var blockID = anchor.getAttribute('href');
+      document.querySelector("a[name=".concat(blockID.slice(1), "]")).scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    });
+  };
+
+  for (var _iterator = anchors[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+    _loop();
+  } //---------------------------------------------------------------------------
+  //Page component animation
+
+} catch (err) {
+  _didIteratorError = true;
+  _iteratorError = err;
+} finally {
+  try {
+    if (!_iteratorNormalCompletion && _iterator["return"] != null) {
+      _iterator["return"]();
+    }
+  } finally {
+    if (_didIteratorError) {
+      throw _iteratorError;
+    }
+  }
+}
 
 var isScrolling = false;
 window.addEventListener("scroll", throttleScroll, false);

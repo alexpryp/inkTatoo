@@ -9,24 +9,26 @@
 <body>
 	<div class="page-body">
 		<header class="hide-item">
+			<a name="home"></a>
 			<nav>
 				<div class="menu menu-first">
-					<a href="#" class="active">home</a>
-					<a href="#">about</a>
-					<a href="#">gallery</a>
+					<a class="tablinks active" onclick="activateTab(event)" href="#home">home</a>
+					<a class="tablinks" onclick="activateTab(event)" href="#about-us">about</a>
+					<a class="tablinks" onclick="activateTab(event)" href="#gallery">gallery</a>
 				</div>
 				<div class="logo">
 					<img src="images/header/inkTattooLogo.png" alt="Ink Tattoo logo">
 				</div>
 				<div class="menu menu-second">
 					<a href="#">faq</a>
-					<a href="#">find us</a>
-					<a href="#">contact</a>
+					<a class="tablinks" onclick="activateTab(event)" href="#find-us">find us</a>
+					<a class="tablinks" onclick="activateTab(event)" href="#contact">contact</a>
 				</div>
 			</nav>
 		</header>
 
 		<section class="about-us">
+			<a name="about-us"></a>
 			<div class="about-us-big">
 				<div class="about-item-big about-item-1 hide-item">
 					<div class="about-us-head">
@@ -164,9 +166,10 @@
 				</p>
 			</div>
 		</section>
-
+		<a name="gallery"></a>
 		<section class="gallery">
 			<div class="gallery-head hide-item">
+				
 				<div class="gallery-head-content">
 					<h2>gallery</h2>
 				</div>
@@ -194,6 +197,7 @@
 		<section class="contact">
 			<div class="contact-us hide-item">
 				<div class="contact-head">
+					<a name="contact"></a>
 					<h2>contact us</h2>
 				</div>
 				<div class="contact-text">
@@ -234,6 +238,7 @@
 		</section>
 
 		<section class="map hide-item">
+			<a name="find-us"></a>
 			<div class="image">
 			</div>
 		</section>
@@ -241,17 +246,17 @@
 		<footer class="hide-item">
 			<nav>
 				<div class="menu menu-first">
-					<a href="#" class="active">home</a>
-					<a href="#">about</a>
-					<a href="#">gallery</a>
+					<a class="tablinks active" onclick="activateTab(event)" href="#home">home</a>
+					<a class="tablinks" onclick="activateTab(event)" href="#about-us">about</a>
+					<a class="tablinks" onclick="activateTab(event)" href="#gallery">gallery</a>
 				</div>
 				<div class="logo">
 					<img src="images/header/inkTattooLogo.png" alt="Ink Tattoo logo">
 				</div>
 				<div class="menu menu-second">
 					<a href="#">faq</a>
-					<a href="#">find us</a>
-					<a href="#">contact</a>
+					<a class="tablinks" onclick="activateTab(event)" href="#find-us">find us</a>
+					<a class="tablinks" onclick="activateTab(event)" href="#contact">contact</a>
 				</div>
 			</nav>
 			<p>&copy; 2014  InkTattoo. All rights reserved - Designed by theuncreativelab.com</p>
